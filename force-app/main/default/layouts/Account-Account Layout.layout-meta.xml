@@ -45,6 +45,10 @@
                 <behavior>Edit</behavior>
                 <field>Custom_Field_Master__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Custom_Field_Branch__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
