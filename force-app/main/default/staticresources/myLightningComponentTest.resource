@@ -3,10 +3,10 @@
  */
 describe("A simple passing test", function() {
     it("checks that true is always true", function() {
-        expect(true).toBe(true);
+        expect(true).toBe(false);
     });
 });
 
-describe("myLightningComponentTest", function() { 
-
+describe("myLightningComponentTest", function() {
+    
 });
