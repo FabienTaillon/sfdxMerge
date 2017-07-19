@@ -24,7 +24,7 @@ script:
 - sfdx force:package:install -i 04t9A000000D25z
 - sfdx force:source:push -u ciorg
 - sfdx force:apex:test:run -u ciorg -c -r human
-- sfdx force:lightning:test:run
+- sfdx force:lightning:test:run -t 200000
 - sfdx force:org:delete -u ciorg -p
 notifications:
   email: false
