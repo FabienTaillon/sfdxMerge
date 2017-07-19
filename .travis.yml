@@ -3,6 +3,8 @@ dist: trusty
 cache: false
 env:
 - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+addons:
+  chrome: stable
 before_install:
 - openssl aes-256-cbc -K $encrypted_1d726809695a_key -iv $encrypted_1d726809695a_iv
   -in assets/server.key.enc -out assets/server.key -d
@@ -17,7 +19,7 @@ before_install:
   --username $USERNAME --setdefaultdevhubusername -a HubOrg
 script:
 - sfdx force:lightning:lint ./force-app/main/default/aura
-- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg -w 10
+- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg
 - sfdx force:package:install -i 04t9A000000D25z
 - sfdx force:source:push -u ciorg
 - sfdx force:apex:test:run -u ciorg -c -r human
