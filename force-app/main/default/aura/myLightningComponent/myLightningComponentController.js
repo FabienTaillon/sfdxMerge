@@ -3,7 +3,7 @@
         component.set('v.setMeOnInit', 'Hello World');
 
         var test = {
-            'FirstName' : 'Fabien',
+            'FirstName' : 'Fabien'
             'LastName'  : 'Taillon'
         }
     }
