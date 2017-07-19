@@ -18,7 +18,7 @@ before_install:
 script:
 - sfdx force:lightning:lint ./force-app/main/default/aura
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg
-- sfdxMerge fabien$ sfdx force:package:install -i 04t9A000000D25z
+- sfdx force:package:install -i 04t9A000000D25z
 - sfdx force:source:push -u ciorg
 - sfdx force:apex:test:run -u ciorg -c -r human
 - sfdx force:org:delete -u ciorg -p
