@@ -2,6 +2,6 @@
 public class MyClassTest {
 
     static testMethod void addIntegersTest() {
-        System.assertEquals(true, true);
+        System.assertEquals(true, false);
     }
 }
