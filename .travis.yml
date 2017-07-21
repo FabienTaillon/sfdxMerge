@@ -25,7 +25,7 @@ script:
 - sfdx force:source:push -u ciorg
 - sfdx force:apex:test:run -u ciorg -c -r human
 - sleep 60
-- sfdx force:lightning:test:run -t 200000
+- sfdx force:lightning:test:run -u ciorg
 - sfdx force:org:delete -u ciorg -p
 notifications:
   email: false
